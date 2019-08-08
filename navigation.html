@@ -4,37 +4,41 @@
 <title></title>
 </head>
 <style>
+ .button {
+  background:#e7e7e7;
+  border:1px solid;
+  border-radius:3px;
+  font:700 13px Helvetica,Arial;
+  height:300px;
+  line-height:28px;
+  padding:0 20px;
+  text-align:center;
+  margin-right:10px;
+  box-sizing:border-box;
+ }
  ul {
-  list-style:none;
-  margin:0px;
-  padding:0px;
+     list-style:none;
+     padding:0px;
  }
-  ul li a {
-   text-decoration:none;
-   font-family:georgia,"Times New Romen",Times,serif;
-   background-color:#5c755e;
-   color:white;
-   display:block;
-   margin:5px;
-   width:80px;
-   padding:10px;
-   border:1px solid red;
-   border-radius:2px;
-   text-align:center;
-   height:25px;
-   line-height:25px;
+   li  {
+      display:inline;
  }
- ul li a:hover {
-  background-color:#d3d3d3;
-  color:black;
+  a {
+      color:#666;
+      text-decoration:none;
+      float:left;
+ }
+ a:hover {
+       color:#000;
+       background-color: #dadada
  }
  </style>
 <body>
   <ul>
-    <li><a href="">HOME</a></li>
-    <li><a href="">Links</a></li>
-    <li><a href="">Fourm</a></li>
-    <li><a href="">About</a></li>
+    <li><a class="button" href="">HOME</a></li>
+    <li><a class="button" href="">Links</a></li>
+    <li><a class="button" href="">Fourm</a></li>
+    <li><a class="button" href="">About</a></li>
   
   </ul>
   </body>
