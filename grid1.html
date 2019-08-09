@@ -6,10 +6,17 @@
 <style>
    .wrapper {
    display:grid;
-   grid-template-columns:70% 30%;
-   grid-column-gap:1em;
-   grid-row-gap:1em;
+   /*grid-template-columns:1fr 1fr 1fr;*/   
+   grid-template-columns:repeat(3,1fr);
+   grid-gap:1em;
+   /*grid-auto-rows:100px;*/
+    grid-auto-rows:minmax(100px,auto);
    }
+   .nested {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      grid-auto-rows:70px;
+      grid-gap:1em;
   .wrapper>div {
      background:#eee;
      padding:1em;
@@ -17,6 +24,10 @@
      .wrapper>div:nth-child(odd) {
      background:#ddd;
      }
+      .nested>div {
+         border:#333 1px solid;
+         padding:1em;
+      }
    </style>
      
 <body>
@@ -25,4 +36,30 @@
   Lorem ipsum dolor sit.
   </div>
   <div>
-    
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Dolor sed viverra ipsum nunc aliquet bibendum enim. In massa tempor nec feugiat. Nunc aliquet bibendum enim facilisis gravida. 
+      Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Amet luctus venenatis lectus magna fringilla. Volutpat maecenas 
+      volutpat blandit aliquam etiam erat velit scelerisque in. Egestas egestas fringilla phasellus faucibus scelerisque eleifend. 
+      Sagittis orci a scelerisque purus semper eget duis. Nulla pharetra diam sit amet nisl suscipit. Sed adipiscing diam donec 
+      adipiscing tristique risus nec feugiat in. Fusce ut placerat orci nulla. Pharetra vel turpis nunc eget lorem dolor. 
+      Tristique senectus et netus et malesuada.
+      </div>
+ <div class="nested">
+    <div>Lorem ipsum dolor sit.</div>
+    <div>Lorem ipsum dolor sit.</div>
+    <div>Lorem ipsum dolor sit.</div>
+   </div>
+ <div>
+    Lorem ipsum dolor sit.
+  </div>
+  <div>
+     Lorem ipsum dolor sit.
+  </div>
+  <div>
+   Lorem ipsum dolor sit.
+  </div>
+  <div>
+  Lorem ipsum dolor sit.
+  </div>
+   </body>
+   </html>
